@@ -1,0 +1,8 @@
+El Problema:
+Recibes un DataFrame con presupuestos de distintos proyectos de construcción. Algunos registros están incompletos y necesitas aislar los proyectos que presentan sobrecostos.
+
+Tu Misión:
+Escribe una función llamada filtrar_presupuestos(df) que:
+Elimine las filas con valores nulos (NaN) en la columna costo_ejecutado.
+Cree una nueva columna llamada desviacion_costo restando la columna presupuesto_inicial de costo_ejecutado.
+Filtre y devuelva un nuevo DataFrame solo con los proyectos donde la desviacion_costo sea mayor a cero, ordenados de mayor a menor sobrecosto.
