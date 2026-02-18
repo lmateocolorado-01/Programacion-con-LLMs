@@ -1,1 +1,9 @@
+El Problema:
+Tienes datos históricos de mezclas de concreto (proporción de cemento, agua, agregados, aditivos) y si superaron o no la prueba de resistencia a los 28 días. Quieres entrenar un modelo para predecir si una nueva mezcla será aprobada.
 
+Tu Misión:
+Escribe una función llamada predecir_resistencia(X_train, y_train, X_test) que realice lo siguiente:
+Reciba los datos de entrenamiento (X_train, y_train) y los datos a predecir (X_test).
+Instancie y entrene un modelo RandomForestClassifier de sklearn.ensemble (con random_state=42).
+Realice las predicciones sobre X_test.
+Devuelva el array de numpy con las predicciones generadas por el modelo.
