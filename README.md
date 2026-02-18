@@ -1,1 +1,2 @@
-# Programaci-n-con-LLMs
+Luis Mateo Colorado Saldarriaga
+lmateo.colorado@udea.edu.co
