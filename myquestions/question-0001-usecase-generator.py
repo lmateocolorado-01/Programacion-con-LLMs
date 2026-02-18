@@ -32,8 +32,3 @@ def generar_caso_de_uso_filtrar_presupuestos():
     
     return input_data, output_data
 
-
-
-entrada, salida = generar_caso_de_uso_filtrar_presupuestos()
-print("--- INPUT --- \n", entrada)
-print("\n--- OUTPUT ESPERADO --- \n", salida)
