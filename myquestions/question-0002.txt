@@ -1,0 +1,9 @@
+El Problema:
+Tienes un DataFrame con el reporte de miles de interferencias (clashes) detectadas en un modelo BIM entre las disciplinas de estructura y plomería.
+
+Tu Misión:
+Escribe una función llamada resumir_interferencias(df) que:
+Agrupe los datos por la columna nivel_edificio.
+Cuente el número total de interferencias registradas (usando la columna id_clash) para cada nivel.
+Renombre la columna del conteo a total_conflictos.
+Devuelva la tabla final con el nivel_edificio como índice.
