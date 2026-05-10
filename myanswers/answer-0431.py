@@ -7,7 +7,7 @@ from sklearn.ensemble import GradientBoostingClassifier
 
 def clasificar_falla_electrica(X_train, y_train, X_test, n_components):
     """
-    Clasifica fallas en redes eléctricas usando RobustScaler, PCA y GradientBoostingClassifier.
+    Clasifica fallas en redes eléctricas usando un pipeline de sklearn.
 
     Parámetros:
     X_train: datos de entrenamiento
@@ -16,13 +16,13 @@ def clasificar_falla_electrica(X_train, y_train, X_test, n_components):
     n_components: número de componentes para PCA
 
     Retorna:
-    numpy array de shape (n_test,) con clases enteras en {0, 1, 2, 3}
+    numpy array con las predicciones para X_test.
     """
 
     pipeline = Pipeline([
-        ('scaler', RobustScaler()),
-        ('pca', PCA(n_components=n_components, random_state=42)),
-        ('classifier', GradientBoostingClassifier(
+        ("scaler", RobustScaler()),
+        ("pca", PCA(n_components=n_components, random_state=42)),
+        ("classifier", GradientBoostingClassifier(
             n_estimators=100,
             max_depth=3,
             random_state=42
