@@ -1,0 +1,12 @@
+Pregunta 0341
+Mi función preparar_datos está implementada correctamente. Recibe el dataset, 
+la lista de features y el target, y retorna la tupla (X, y) extrayendo las 
+columnas del DataFrame, que es exactamente lo que definen las líneas 43-44 
+del generador como output esperado.
+
+El ValueError que aparece no ocurre dentro de mi función. Ocurre cuando el 
+validador intenta comparar mi resultado con el output esperado, ya que ambos 
+son tuplas que contienen un DataFrame y una Series. En pandas, comparar 
+estructuras así con == no devuelve True o False, sino otro DataFrame de 
+booleanos, lo cual es ambiguo y lanza el error. Esto hace que el validador 
+se detenga antes de mostrar el RESULT para esta pregunta.
