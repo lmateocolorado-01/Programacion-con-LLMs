@@ -7,7 +7,6 @@ from sklearn.model_selection import train_test_split
 def preparar_datos(dataset, features, target):
     X = dataset[features]
     y = dataset[target]
-
     return X, y
 
 
@@ -21,8 +20,7 @@ def predecir_cosecha_gulupa(dataset, condiciones_actuales):
 
     target = "produccion_kg"
 
-    X = dataset[features]
-    y = dataset[target]
+    X, y = preparar_datos(dataset, features, target)
 
     X_train, X_test, y_train, y_test = train_test_split(
         X,
@@ -34,7 +32,10 @@ def predecir_cosecha_gulupa(dataset, condiciones_actuales):
     modelo = LinearRegression()
     modelo.fit(X_train, y_train)
 
-    condiciones_actuales = np.array(condiciones_actuales).reshape(1, -1)
+    condiciones_actuales = pd.DataFrame(
+        [condiciones_actuales],
+        columns=features
+    )
 
     prediccion = modelo.predict(condiciones_actuales)
 
